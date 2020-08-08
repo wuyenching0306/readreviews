@@ -16,16 +16,19 @@ avg = sum_len / len(data)
 avg = int(avg)
 print('平均留言長度為', avg, '個字元。')
 
-new = []
-for d in data:
-	if len(d) < 100:
-		new.append(d)
+#new = []
+#for d in data:
+#	if len(d) < 100:
+#		new.append(d)
+new = [d for d in data if len(d) < 100]
 print('一共有', len(new), '筆留言長度小於100')
 
-good = []
-for d in data:
-	if 'good' in d:
-		good.append(d)
+
+#good = []
+#for d in data:
+#	if 'good' in d:
+#		good.append(d)
+good = [d for d in data if 'good' in d]
 print('一共有', len(good), '筆資料提到good')
 
 #print(line.strip())
