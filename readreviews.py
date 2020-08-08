@@ -6,6 +6,5 @@ with open('reviews.txt', 'r') as f:
 		data.append(line)
 		if count % 100000 == 0:
 			print(len(data))
-print(len(data))
-print(data[0])
+print('檔案讀取完畢,總共有', len(data), '筆資料。')
 #print(line.strip())
