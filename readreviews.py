@@ -16,4 +16,10 @@ avg = sum_len / len(data)
 avg = int(avg)
 print('平均留言長度為', avg, '個字元。')
 
+new = []
+for d in data:
+	if len(d) < 100:
+		new.append(d)
+print('一共有', len(new), '筆留言長度小於100')
+
 #print(line.strip())
